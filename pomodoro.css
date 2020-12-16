@@ -1,0 +1,79 @@
+body {
+    background: #deb882;
+
+    display: grid;
+    /* grid-template-rows: 1fr 1fr; */
+    justify-content: center;
+    height: 100%;
+}
+
+.pomo {
+
+    display: grid;
+
+    grid-template-rows: 1fr 2fr;
+    justify-content: center;
+    width: 220px;
+    height: 460px;
+    background: #493c31;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    background: #1c1814;
+    color: #f2f2f2d7;
+    padding: 6px;
+    border-radius: 4px;
+
+}
+.section1 {
+    height: 150px;
+    width: 180px;
+    margin: 10px;
+    border: 10px solid #636361;
+    background: #f4f4ff;
+    justify-content: center;
+    display: flex;
+    font-size: 48px;
+}
+.section1> label{
+    color: aqua;   
+    margin-top: 45px;
+}
+.section2{
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    
+}
+.add_timer, .action_btn{
+    display: grid;
+    align-items: center;    grid-template-columns: 1fr 1fr;
+    border-bottom:1px dotted #f3f3f3;
+}
+.session_timer, .break_timer{
+    color: #f3f5f2;
+    padding: 3px;
+    line-height: .02;
+    text-align:center;
+}
+.session_timer>h4{
+    color: #197e84;
+}
+.break_timer>h4{
+    color: #c45e3d;
+}
+.btn_session{
+    margin: 2px;
+    width: 32px;
+    height: 20;
+    padding: 1px;
+}
+.pause_btn_section, .reset_btn_section{
+    justify-self: center;
+}
+.session_info{
+    color: #f3f3f3da;
+    text-align: center;
+    border-bottom:1px dotted #f3f3f3;
+}
