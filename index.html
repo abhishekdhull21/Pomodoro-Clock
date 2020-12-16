@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="pomodoro.css">
+
+</head>
+
+<body>
+    <div class="pomo">
+        <div class="section1">
+            <label for="" id="podomo_lbl">00:00</label>
+        </div>
+
+        <div class="section2">
+            <div class="session_info">
+                <h2 id="status_lbl">Session 1</h2>
+            </div>
+            <div class="add_timer">
+                <div class="session_timer">
+                    <label for="">Session Time</label>
+                    <h4 id="session_lbl">20 min</h4>
+                    <button class="btn btn_session" id="session_dec">-</button>
+                    <button class="btn btn_session" id="session_inc">+</button>
+                </div>
+                <div class="break_timer"><label for="">Break Time</label>
+                    <h4 id="break_lbl">05 min</h4>
+                    <button class="btn btn_session" id="break_dec">-</button><button class="btn btn_session"
+                        id="break_inc">+</button>
+                </div>
+            </div>
+            <div class="action_btn">
+                <div class="pause_btn_section">
+                    <button class="btn" id="btn_pause" value="start">Start</button>
+                </div>
+                <div class="reset_btn_section">
+
+                    <button class="btn" id="btn_reset">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="pomodoro.js"></script>
+
+</html>
