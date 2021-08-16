@@ -34,10 +34,10 @@ var intervalId = 0;
 //function to increment session time
 
 function changeSessionTime(event) {
-    if (event.toElement == sessionInc) {
-        sessionTime++;
+    if (event.srcElement == sessionInc) {
+        sessionTime += 5;
     }
-    if (event.toElement == sessionDec) {
+    if (event.srcElement == sessionDec) {
         if (sessionTime > 0)
             sessionTime--;
     }
@@ -49,10 +49,10 @@ function changeSessionTime(event) {
 //function to increment break time
 
 function changeBreakTime(event) {
-    if (event.toElement == breakInc) {
+    if (event.srcElement == breakInc) {
         breakTime++;
     }
-    if (event.toElement == breakDec) {
+    if (event.srcElement == breakDec) {
         if (breakTime > 0)
             breakTime--;
     }
@@ -64,7 +64,7 @@ function changeBreakTime(event) {
 //function action btn's
 
 function startTimer(event) {
-    if (event.toElement == btnPause) {
+    if (event.srcElement == btnPause) {
         console.log(btnPause.value);
         if (btnPause.value == "start") {
             countdown(sessionTime * 60, breakTime * 60);
