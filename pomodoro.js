@@ -31,6 +31,7 @@ breakDec.addEventListener("click", changeBreakTime);
 btnPause.addEventListener("click", startTimer);
 btnReset.addEventListener("click", resetTimer);
 var intervalId = 0;
+var remainTime = 0;
 //function to increment session time
 
 function changeSessionTime(event) {
@@ -70,11 +71,16 @@ function startTimer(event) {
             countdown(sessionTime * 60, breakTime * 60);
             btnPause.innerHTML = "Pause"
             btnPause.value = "pause";
+        } else if(btnPause.value == "start2") {
+            countdown(sessionTime, breakTime * 60);
+            btnPause.innerHTML = "Pause"
+            btnPause.value = "pause";
         }
         else {
-
+            sessionTime = remainTime
+            clearInterval(intervalId)
             btnPause.innerHTML = "Start";
-            btnPause.value = "start";
+            btnPause.value = "start2";
         }
     }
 
@@ -86,6 +92,7 @@ function countdown(timeInSec, breakTimeSec) {
     intervalId = setInterval(function () {
         if (timeInSec > 0) {
             timeInSec--;
+            remainTime = timeInSec;
             podomoLbl.style.color = "#197e84";
             statusLbl.innerHTML = "Session " + sessionCounter;
             var sec = timeInSec % 60;
